@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="root1"></div>
+
+    <!-- First way of injecting React into our project - Using CDN links -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- The first link is the core React code -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- The second link connects React to the browsers using react-dom i.e. Document Object Model -->
+
+    <script>
+      const heading = React.createElement("h1", {}, "Hello World from React!");
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      // This 'root' is the place where all our React code will run. Everything that we will render, we will render inside this 'root'.
+
+      root.render(heading);
+
+      // const head = React.createElement("h1", {}, "Hello I am Adwait");
+      // const root1 = ReactDOM.createRoot(document.getElementById("root1"));
+      // root1.render(head);
+    </script>
+  </body>
+</html>
