@@ -1,0 +1,14 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "I am learning React",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Adwait Panda",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
