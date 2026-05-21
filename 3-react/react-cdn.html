@@ -7,7 +7,16 @@
     <title>Learn React</title>
   </head>
   <body>
-    <div id="root"></div>
+    <h1>I am above root</h1>
+    <div id="root">
+      <h1>Adwait was here!</h1>
+      <!-- This h1 tag will be loaded first. But as soon as the react root renders something here, the h1 previously here will be replaced by that.  -->
+      <!-- So root.render() is replacing (not appending) things here inside this id="root". Not just one thing but everything. -->
+    </div>
+    <div id="something">
+      <h1>I am something else</h1>
+    </div>
+    <h1>I am below root</h1>
 
     <script
       crossorigin

@@ -8,6 +8,8 @@ const heading = React.createElement(
   "Hello World from React!"
 ); // React creates a Javascript object called 'heading'
 
+// For creating a single children, no [] is required, but creating multiple children requires us to pass the children in the form of an array/list i.e inside [].
+
 // console.log(heading); React element is nothing but a normal Javascript object.
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -72,3 +74,7 @@ root.render(parent1);
 // This way of writing makes React even clumsier than HTML.
 // So we have something called JSX. But JSX is not the only way to write React. Core React is what we have written above actually.
 // JSX will make our life easy when we have to create tags. So this is the last time we are using React.createElement().
+
+const head = React.createElement("h1", { id: "head" }, "Adwait was here too!");
+const something = ReactDOM.createRoot(document.getElementById("something"));
+something.render(head);
