@@ -22,3 +22,13 @@
 So React is not the only thing that makes our app fast. There are so many more things that 'bundlers' are doing to make our apps fast. The things are not automatically present when we install react, bundlers do that.
 
 parcel also does not do everything on its own. It needs the help of other libraries present inside node_modules.
+
+- Content Hashing (read about it. Be curious about everything.)
+- Code splitting
+- Differential Bundling (to support older browsers - different bundles for different types of different browsers)
+- Diagnostics - Error Handling (It gives us beautiful errors and suggestions)
+- HTTPS
+- Tree Shaking - remove unused code
+- Different dev and production bundles
+
+Read official documentation of 'parcel' - one of the best documentations.
