@@ -108,9 +108,11 @@ const Headd = () => (
     <h1>Another thing</h1>
   </div>
 );
+// instead of writing <Heading2 />, we can also write <Heading></Heading> in place of it. Both are the same thing. But both are used in different scenarios according to required necessity.
+// We can use a component inside a component any number of times, to make copies again and again.
 
 // We cannot render a functional component the same way as a react element. We do that by doing:
-root.render(<Headd />);
+// root.render(<Headd />);
 
 /**
  * const fn = () => {
@@ -118,3 +120,46 @@ root.render(<Headd />);
  * };
  * is same as const fn = () => true;
  */
+
+// The javascript written inside JSX is executed when the component is rendered in the browser.
+
+// A react element is ultimately a javascript object. So a react element is nothing but a normal javascript variable. So we can add a react element inside a component the same way we can add any other variable i.e. inside {}.
+
+// Similarly we can write element inside element too:
+
+const elem = <span>Hello React</span>;
+
+const title = (
+  <h1>
+    {elem}
+    Hello I am Adwait
+  </h1>
+);
+
+const Headdd = () => (
+  <div>
+    {title}
+    <h1>I am more than Adwait</h1>
+  </div>
+);
+
+// root.render(<Headdd />);
+// We can do a lot of similar crazy things, an element inside an element, a component inside another component, a component inside an element, etc i.e. anything inside anything
+
+// So bottom line is {} can contain any piece of javascript code inside it.
+
+// As a functional component is a javascript function at the end of the day, we can call the component as a function inside {} in JSX:
+
+// e.g.
+const Head2 = () => (
+  <div>
+    {Headdd()}
+    <Headdd />
+    <Headdd></Headdd>
+    {title}
+    <h2>Something</h2>
+  </div>
+);
+// We have called the 'Headdd' component three times in different ways (but the same result), the first one as a javascript function inside {}, and other two ones as a functional component.
+
+root.render(<Head2 />);
